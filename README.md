@@ -26,3 +26,7 @@ somewhat and the result is the tutorial I am currently working on.</p>
 <p>Most of what I've learned, I am trying to write in as comments in the JSX files.</p>
 
 <p>I'll include more helps on application structure here as well, time permitting.</p>
+
+> # Foo
+> bar
+> baz
