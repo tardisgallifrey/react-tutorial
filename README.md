@@ -28,5 +28,5 @@ somewhat and the result is the tutorial I am currently working on.</p>
 <p>I'll include more helps on application structure here as well, time permitting.</p>
 
 >Foo
-     >bar
-     >baz
+>     bar
+>     baz
