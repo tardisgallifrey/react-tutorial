@@ -25,7 +25,7 @@ somewhat and the result is the tutorial I am currently working on.</p>
             |__App.jsx
             |__(all other Component JSX files)</pre>
 
-<p>Most of what I've learned, I am trying to write in as comments in the JSX files. Please note: These aren't identified by any kind of lesson numbering system.  If you start at the top of App.jsx and work down, it should follow things as presented in order from the </p>
+<p>Most of what I've learned, I am trying to write in as comments in the JSX files. Please note: These aren't identified by any kind of lesson numbering system.  If you start at the top of App.jsx and work down, it should follow things as presented in order from the <bold>Main Concepts</bold> lessons, beginning with <bold>3. Rendering Elements</bold>.</p>
 
 <p>I'll include more helps on application structure here as well, time permitting.</p>
 
