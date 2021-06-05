@@ -1,8 +1,11 @@
-import React from 'react';        //Required imported module
-import Welcome from './Welcome';  //import a simple Component
-import Welcome1 from './Welcome'; //import a second module from same JSX file
-import List2 from './List2';      //import correctly formatted array list
-import List from './List2';       //import incorrectly formatted array list
+import React from 'react';                  //Required imported module
+import Welcome from './Welcome';            //import a simple Component
+import Welcome1 from './Welcome';           //import a second module from same JSX file
+import Welcome_list from './Welcome_list';  //import the Welcome_List from ./Welcome.JSX
+import Comment from './Comment';            //import Comment without function extraction
+import Comment1 from './Comment';           //import Comment1 that's had functions extracted
+import List2 from './List2';                //import correctly formatted array list
+import List from './List2';                 //import incorrectly formatted array list
 import './index.css'
 
 //A simple JSX element (it could be named anything)
@@ -60,6 +63,27 @@ const greeting1_object = {
     }
   };
 
+//Calling a component and adding it to an element
+  const welcome_message = <Welcome name="Sara" />;
+
+
+  //A comment object for extracting components
+  //At this state of learning, Date() objects cannot go
+  //in as React Children.  Best to convert to String in the
+  //object creation before passing to functions or components
+  const comment = {
+    date: new Date().toString,
+    text: 'I hope you enjoy learning React!',
+    author: {
+      name: 'Hello Kitty',
+      avatarUrl: 'https://placekitten.com/g/64/64',
+    }
+  };
+
+  
+
+
+
 // This is just a JavaScript array of numbers
 // below, in List2 component, we pass it to 
 // that component
@@ -84,6 +108,22 @@ function App() {
             <Welcome name="Dave" />
             <p>Another component from the same JSX fie.</p>
             <Welcome1 name="Janice" />
+            <p>Calling a Component and adding it to an element for display.</p>
+            {welcome_message}
+            <p>A Component that uses other Components (the Welcome Component).</p>
+            <Welcome_list />
+            <p>Before Component Extraction (see Comment.jsx).</p>
+            <Comment
+              date={comment.date}
+              text={comment.text}
+              author={comment.author}
+            />
+            <p>After Component Extraction (Comment1 in Comment.jsx).</p>
+            <Comment1
+              date={comment.date}
+              text={comment.text}
+              author={comment.author}
+            />
             <p>How to correctly use .map() function.</p>
             <h1>How to Display Lists</h1>
             <p>Correctly formatted.</p>
