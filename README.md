@@ -1,6 +1,6 @@
 <h1>The ReactJS Tutorial They Missed</h1>
 
-<h2>A <a href="reactjs.org/https://reactjs.org/docs/hello-world.html">ReactJS</a> project built with <a href="https://www.snowpack.dev/tutorials/react">Snowpack</a> that follows most of the Reactjs.org lessons</h2>
+<h2>A <a href="https://reactjs.org/docs/hello-world.html">ReactJS</a> project built with <a href="https://www.snowpack.dev/tutorials/react">Snowpack</a> that follows most of the Reactjs.org lessons</h2>
 <hr />
 <p>I had real problems trying to learn ReactJS because the main React.org website didn't seem to explain 
 anything about how to formulate JSX Component files into an App. Fortunately, I've been able to figure that out 
@@ -25,7 +25,7 @@ somewhat and the result is the tutorial I am currently working on.</p>
             |__App.jsx
             |__(all other Component JSX files)</pre>
 
-<p>Most of what I've learned, I am trying to write in as comments in the JSX files.</p>
+<p>Most of what I've learned, I am trying to write in as comments in the JSX files. Please note: These aren't identified by any kind of lesson numbering system.  If you start at the top of App.jsx and work down, it should follow things as presented in order from the </p>
 
 <p>I'll include more helps on application structure here as well, time permitting.</p>
 

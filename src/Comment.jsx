@@ -44,7 +44,7 @@ function Comment(props) {
   }
   export {Comment1};
 
-  //Extrction of Avatar from Comment
+  //Extraction of Avatar from Comment
   function Avatar(props) {
     return (
       <img className="Avatar"
