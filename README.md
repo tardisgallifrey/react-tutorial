@@ -9,7 +9,7 @@ somewhat and the result is the tutorial I am currently working on.</p>
 <p>This project builds from the <a href="https://docs.microsoft.com/en-us/learn/paths/react/">Microsoft Learn lessons on ReactJS</a>, which uses Snowpack bundler.  If you wish, you should try going through some of those lessons (there are only three) before embarking here. The Microsoft Learn lessons do give provide some information on the structure of a Reactjs application, but I'll describe it in detail here.</p>
 
 
-<p><code>MyAppFolder______
+<p><code>MyAppFolder______<br>
     |            |__package.json
     |            |__snowpack.config.js
     |
