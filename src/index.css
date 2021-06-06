@@ -4,3 +4,10 @@ article {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
 }
+
+
+.Clock {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }

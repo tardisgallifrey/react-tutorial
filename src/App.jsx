@@ -4,6 +4,7 @@ import Welcome1 from './Welcome';           //import a second module from same J
 import Welcome_list from './Welcome_list';  //import the Welcome_List from ./Welcome.JSX
 import Comment from './Comment';            //import Comment without function extraction
 import Comment1 from './Comment';           //import Comment1 that's had functions extracted
+import Clock from './Clock'
 import List2 from './List2';                //import correctly formatted array list
 import List from './List2';                 //import incorrectly formatted array list
 import './index.css'
@@ -72,7 +73,7 @@ const greeting1_object = {
   //in as React Children.  Best to convert to String in the
   //object creation before passing to functions or components
   const comment = {
-    date: new Date().toString,
+    date: new Date().toString(),
     text: 'I hope you enjoy learning React!',
     author: {
       name: 'Hello Kitty',
@@ -80,9 +81,22 @@ const greeting1_object = {
     }
   };
 
-  
+  //All React components must act like pure functions with respect to their props
 
+  //good form - the function doesn't alter the input parameters
+  function sum(a, b) {
+    return a + b;
+  }
 
+  //bad form -- function is altering input parameter
+  function withdraw(account, amount) {
+    account.total -= amount;
+  }
+
+const mytime = {
+  date: new Date().toString(),
+  text: 'Today\'s Clock',
+}
 
 // This is just a JavaScript array of numbers
 // below, in List2 component, we pass it to 
@@ -124,6 +138,8 @@ function App() {
               text={comment.text}
               author={comment.author}
             />
+            <p>A clock component in the upper right corner</p>
+            <Clock />
             <p>How to correctly use .map() function.</p>
             <h1>How to Display Lists</h1>
             <p>Correctly formatted.</p>

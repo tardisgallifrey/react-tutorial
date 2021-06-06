@@ -3,6 +3,9 @@ import React from 'react';
 
 //Everything is the same as the Reactjs.org
 //tutorial except formatDate - it is not defined
+//Also, The new Date() returns an object.  React element
+//children cannot have objects(?), so, I used the .ToString() method
+//That worked. You can see that in the object I created in App.jsx
 
 //Original function - complicated
 function Comment(props) {
@@ -57,7 +60,7 @@ function Comment(props) {
 
   //These functions do not need exports as they are 
   //only called in this file (scope is local/here)
-  //Extraction of User-Info from Comment
+  //Extraction of User-Info from Comment. UserInfo calls Avatar function
   function UserInfo(props) {
     return (
       <div className="UserInfo">
