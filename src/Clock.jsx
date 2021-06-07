@@ -1,5 +1,20 @@
 import React from 'react';
 
+//This function is here only for reference
+//It cannot be called correctly as it is written
+//But, this is where the lesson begins on state and lifecycle
+//See the final component below
+
+function tick() {
+  return(
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+
+setInterval(tick, 1000);
 
 //I could not make the non-state Tick function work at all
 //After wasting much time, I just moved on to the state and lifecycle
