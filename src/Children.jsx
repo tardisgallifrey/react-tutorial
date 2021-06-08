@@ -1,5 +1,5 @@
 import React from 'react';
-import Welcome from './Welcome';
+import Welcome from './Components';
 
 //A component that uses another component
 function Welcome_list() {

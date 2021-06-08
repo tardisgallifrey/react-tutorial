@@ -1,12 +1,14 @@
-import React from 'react';                  //Required imported module
-import Welcome from './Welcome';            //import a simple Component
-import Welcome1 from './Welcome';           //import a second module from same JSX file
-import Welcome_list from './Welcome_list';  //import the Welcome_List from ./Welcome.JSX
-import Comment from './Comment';            //import Comment without function extraction
-import Comment1 from './Comment';           //import Comment1 that's had functions extracted
-import Clock from './Clock'
-import List2 from './List2';                //import correctly formatted array list
-import List from './List2';                 //import incorrectly formatted array list
+import React from 'react';                                          //Required imported module
+import Welcome from './Components';                                 //import a simple Component
+import Welcome1 from './Components';                                //import a second module from same JSX file
+import Welcome_list from './Children';                              //import the Welcome_List from ./Welcome.JSX
+import Comment from './Extractions';                                //import Comment without function extraction
+import Comment1 from './Extractions';                               //import Comment1 that's had functions extracted
+import Clock from './States_LifeCycle'                              //import Clock Component showing how to use state/lifecycle
+import Toggle from './Event_Handlers'                               //import Toggle button component to show event handlers
+import Condition1, { Condition_Null } from './Conditions'           //import first conditional from Conditions (not the same as reactjs.org)
+import List2 from './List2';                                        //import correctly formatted array list
+import List from './List2';                                         //import incorrectly formatted array list
 import './index.css'
 
 //A simple JSX element (it could be named anything)
@@ -98,6 +100,7 @@ const mytime = {
   text: 'Today\'s Clock',
 }
 
+
 // This is just a JavaScript array of numbers
 // below, in List2 component, we pass it to 
 // that component
@@ -140,6 +143,12 @@ function App() {
             />
             <p>A clock component in the upper right corner</p>
             <Clock />
+            <p>A button with an event handler.</p>
+            <Toggle />
+            <p>Selectable Components (Conditional).</p>
+            <Condition1 />
+            <p>Hiding something using Null in a return.</p>
+            <Condition_Null />
             <p>How to correctly use .map() function.</p>
             <h1>How to Display Lists</h1>
             <p>Correctly formatted.</p>
