@@ -44,6 +44,8 @@ function NumberList(props) {
 }
 export { NumberList };
 
+//This is a basic key method using the item for a key
+//This is not the best method
 function NumberListIndexed(props) {
     const numbers = props.numbers;
     const listItems = numbers.map((number) =>

@@ -9,6 +9,7 @@ import Toggle from './Event_Handlers'                                         //
 import Condition1, { Condition_Null, Condition_Best } from './Conditions'     //import first conditional from Conditions (not the same as reactjs.org)
 //import List functions, non-keyed, keyed, Indexed, etc
 import { List, List1, NumberList, NumberListIndexed, NumberListKeyed, Blog } from './List';
+import { NameForm, EssayForm, FlavorForm, FlavorForm2 } from './Forms';
 import './index.css'
 
 //A simple JSX element (it could be named anything)
@@ -169,6 +170,21 @@ function App() {
       <NumberListKeyed numbers={numbers} />
       <p>List Keys unique in array, but not globally.  Both have a post.id key.</p>
       <Blog posts={posts} />
+      <p>Basic HTML form</p>
+      <p>Will open a new page with the form tag added in URL.</p>
+      <form>
+        <label>
+          Name:
+          <input type="text" name="name" />
+        </label>
+      <input type="submit" value="Submit" />
+      </form>
+      <p>A Controlled Component containing a Form.</p>
+      <NameForm />
+      <p>A textarea form component.</p>
+      <EssayForm />
+      <p>A select form component (drop down list).</p>
+      <FlavorForm />
     </article>
   )
 }
