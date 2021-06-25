@@ -9,7 +9,7 @@ import Toggle from './Event_Handlers'                                         //
 import Condition1, { Condition_Null, Condition_Best } from './Conditions'     //import first conditional from Conditions (not the same as reactjs.org)
 //import List functions, non-keyed, keyed, Indexed, etc
 import { List, List1, NumberList, NumberListIndexed, NumberListKeyed, Blog } from './List';
-import { NameForm, EssayForm, FlavorForm, FlavorForm2 } from './Forms';
+import { NameForm, EssayForm, FlavorForm, Reservation, NameForm2, FileInput } from './Forms';
 import './index.css'
 
 //A simple JSX element (it could be named anything)
@@ -114,6 +114,7 @@ const posts = [
   {id: 2, title: 'Installation', content: 'You can install React from npm.'}
 ];
 
+
 //The function we call "App" provides the method
 //to call all or some of our components
 // and return them to make a web page
@@ -185,6 +186,14 @@ function App() {
       <EssayForm />
       <p>A select form component (drop down list).</p>
       <FlavorForm />
+      <p>A Form with multiple inputs</p>
+      <Reservation />
+      <p>An uncontrolled Form where we give the value here in the DOM</p>
+      <NameForm2 />
+      <p>A File Input Form, which is always an uncontrolled Component</p>
+      <FileInput />
+      <p>This is the end of the primary tutorial.</p>
+      <p>All additional tutorials will be in standalone React Apps.</p>
     </article>
   )
 }

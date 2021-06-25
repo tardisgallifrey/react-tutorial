@@ -127,24 +127,66 @@ export class FlavorForm extends React.Component {
   }
 }
 
-//A Select Form (drop down list) that uses an array
-//for selection options
-export class FlavorForm2 extends React.Component {
+//Multiple Input Components
+export class Reservation extends React.Component {
   constructor(props) {
     super(props);
-    //a default choice goes here
-    this.state = {value: ''};
+    this.state = {
+      isGoing: true,
+      numberOfGuests: 2
+    };
 
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleInputChange(event) {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  }
+
+  render() {
+    return (
+      <form>
+        <label>
+          Is going:
+          <input
+            name="isGoing"
+            type="checkbox"
+            checked={this.state.isGoing}
+            onChange={this.handleInputChange} />
+        </label>
+        <br />
+        <label>
+          Number of guests:
+          <input
+            name="numberOfGuests"
+            type="number"
+            value={this.state.numberOfGuests}
+            onChange={this.handleInputChange} />
+        </label>
+      </form>
+    );
+  }
+}
+
+//An uncontrolled Form Component
+//The DOM is the source of truth (states) for the Component
+//One passes in the values needed for the form
+export class NameForm2 extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    //This is how we get the name value from the Input Form
+    this.input = React.createRef();
   }
 
   handleSubmit(event) {
-    alert('Your favorite flavor is: ' + this.state.value);
+    alert('A name was submitted: ' + this.input.current.value);
     event.preventDefault();
   }
 
@@ -152,13 +194,40 @@ export class FlavorForm2 extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          Pick your favorite flavor:
-          <select multiple={true} value={['A', 'B', 'C']}>
-          </select>
+          Name:
+          <input defaultValue="Bob" type="text" ref={this.input} />
         </label>
         <div>
         <input type="submit" value="Submit" />
         </div>
+      </form>
+    );
+  }
+}
+
+//A File Input Form is always an uncontrolled form
+export class FileInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.fileInput = React.createRef();
+  }
+  handleSubmit(event) {
+    event.preventDefault();
+    alert(
+      `Selected file - ${this.fileInput.current.files[0].name}`
+    );
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Upload file:
+          <input type="file" ref={this.fileInput} />
+        </label>
+        <br />
+        <button type="submit">Submit</button>
       </form>
     );
   }
