@@ -39,3 +39,5 @@ somewhat and the result is the tutorial I am currently working on.</p>
 <li>Components are recognized in "App.jsx" when you export them from their JSX file to "App.jsx" (see code files above).</li>
 <li>Component files can have only one <code>export default name-of-componet;</code>.</li>
 </ol>
+
+<p>This React Tutorial was built with the <a href="https://github.com/tardisgallifrey/snowpackscript" >Create Snowpack Script</a> I made but you can use the regular CRA.  The difference is that the SnowPack based script leaves out the "Fluff" that the CRA script puts in.</p>
